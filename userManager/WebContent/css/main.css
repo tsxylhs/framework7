@@ -1,0 +1,55 @@
+html{height: 98%;}
+body{
+	display: flex;
+	flex-flow: column;
+	height: 98%;
+}
+header,footer,nav,article{
+	border:1px solid #ccc;
+	border-radius: 3px;
+}
+section{
+	display: flex;
+	flex-flow:row;
+	height: 98%;
+	margin:5px 0px;
+}
+#menu{
+	width:200px;	
+	margin-right: 5px;
+	background:#F5F6F7;
+}
+header{
+	display:flex;
+	flex-flow:row-reverse nowrap;
+	align-items:flex-end;
+}
+
+article{
+	width: 100%;
+}
+header{
+	height: 100px;
+	background:url(../img/javalogo_cn.jpg) 0px 0px no-repeat;
+	background-size:100px 75px;
+}
+footer{
+	height: 50px;		
+	text-align:center;		
+}
+iframe{
+	border:0px;
+	height:100%;
+	width:100%;
+}
+h6{
+	font:12px/20px 宋体;
+	text-align:center;
+	margin:0px;
+}
+ul{
+	padding-left:10px;
+}
+li{
+	list-style:none;
+}

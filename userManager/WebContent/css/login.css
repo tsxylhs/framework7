@@ -1,0 +1,31 @@
+h1{
+	font-size: 15px;
+	font-family: "微软雅黑";
+	text-align: center;
+}
+h6{
+	font:12px/20px 宋体;
+	color:red;
+	margin:5px;auto;
+	text-align:center;
+}
+section{
+	border:1px solid #ccc;
+	border-radius: 6px;
+	width: 300px;
+	margin: 200px auto 0px auto;
+}
+fieldset{
+	border:0px;
+}
+input[type=text],input[type=password]{
+	width:200px;
+	height: 30px;
+	margin-top:5px;
+}
+input[type=checkbox]{
+	margin:5px auto;
+}
+nav{
+	margin-left: 80px;
+}

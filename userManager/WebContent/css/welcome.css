@@ -1,0 +1,10 @@
+div{
+	max-width:690px;
+	margin:100px auto 0px auto;
+}
+
+@media screen and (max-width:600px){
+	img{max-width:350px;}
+	div{margin:100px auto 0px auto;};
+	
+}

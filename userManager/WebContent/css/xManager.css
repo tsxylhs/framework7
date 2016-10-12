@@ -1,0 +1,49 @@
+html{height: 98%;}
+body{
+	display: flex;
+	flex-flow: column;
+	height: 98%;
+}
+nav{
+	border:1px solid #ccc;
+	border-radius: 3px;
+}
+section{
+	margin:5px 0px;
+}
+#nav_operation{
+	padding: 10px 10px 0px 10px;
+	min-height:50px;
+}
+#nav_query{
+	text-align: center;
+	padding: 5px;	
+}
+#nav_page{
+	margin:5px 0px;
+	padding:5px 10px;
+	background:#F5F6F7;
+}
+#div_operation{
+	float:left;
+}
+#div_page{
+	float:right;
+}
+h5{
+	display:inline;
+	font:12px/20px 宋体;
+	margin:0px 0px;
+}
+#input_page{
+	width:15px;
+}
+#btn_jumpPage{
+	padding:0px;
+	width:30px;
+}
+input[type=text],input[type=password]{
+	width:200px;
+	height: 30px;
+	margin-top:5px;
+}

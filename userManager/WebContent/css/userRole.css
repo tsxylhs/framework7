@@ -1,0 +1,39 @@
+section{
+	margin:5px auto;
+}
+nav{
+	border:1px solid #ccc;
+	border-radius: 3px;
+}
+#nav_page{
+	margin:5px 0px;
+	padding:5px 10px;
+	background:#F5F6F7;
+}
+article{
+	margin-top:5px;
+	border:1px solid #ccc;
+	border-radius: 3px;
+	padding-top:20px;
+	padding-bottom:20px;
+	text-align:left;
+	display:flex;
+	flex-flow:row wrap;
+}
+input[type="checkbox"]{
+	margin:5px 3px 10px 10px;
+}
+form{
+	width:100%;
+}
+div{
+	width:100px;
+	margin:10px auto 0px auto;
+}
+h1,h2{
+	font:12px/20px 宋体;
+	margin:5px;auto;
+}
+span{
+	margin:5px 5px 10px 10px;
+}
