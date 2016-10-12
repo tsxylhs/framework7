@@ -1,0 +1,83 @@
+<p>用户管理{{name}}</p>
+<table class="table">
+      <thead>
+        <tr>
+          <th>帐号</th>
+          <th>姓名</th>
+          <th>角色</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in userList">
+          <td>{{user.userPhone}}</td>
+          <td>{{user.userName}}</td>
+          <td>{{user.userMajor}}</td>
+          <td>
+
+            <button class="btn" ng-click="scanUser(user)" data-toggle="modal" data-target="#myModal" name="scanUser">
+            <!-- 查看资料-->
+              <span class=" glyphicon glyphicon-eye-open" style="color:#adcada;"></span>
+            </button>
+            <!-- 删除用户 -->
+            <button class="btn" ng-click="deleteUser(user)" data-toggle="modal" data-target="#myModal" name="deleteUser">
+              <span class="glyphicon glyphicon-remove" style="color:red;"></span>
+            </button>
+            <!-- 修改用户 -->
+            <button class="btn" style="color:white;" ng-click="alterUser(user)" data-toggle="modal" data-target="#myModal" name="alterUser">
+              <span class="glyphicon glyphicon-pencil" style="color:blue;"></span>
+              
+            </button>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <pagination></pagination>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{modal.title}}</h4>
+      </div>
+      <div class="modal-body">
+        <div ng-if="modal.type == 'scanUser' || modal.type=='deleteUser'" style="text-align:center;">
+          <p>ID:{{modal.user._id}}</p>
+          <p>手机号：{{modal.user.userPhone}}</p>
+          <p>姓名：{{modal.user.userName}}</p>
+           <p>昵称：{{modal.user.userNickName}}</p>
+           <p>角色：{{modal.user.userMajor}}</p>
+           <p>用户密码：{{modal.user.userPassword}}</p>
+          <p style="color:red;" ng-if="modal.type == 'deleteUser' ">{{backInfo}}</p>
+        </div>
+
+        <div ng-if="modal.type == 'alterUser'" style="text-align:center;">
+          <p>修改用户资料</p>
+           <div>用户ID：{{currUser._id}}</div>
+           <div>手机号： <input type="text" ng-model="currUser.userPhone" value="{{currUser.userPhone}}"></div>
+           <div>姓名： <input type="text" ng-model="currUser.userName" value="{{currUser.userName}}"></div>
+           <div>昵称： <input type="text" ng-model="currUser.userNickName" value="{{currUser.userNickName}}"></div>
+          
+            <div>角色
+              <select name="major" id="userMajor" ng-model="currUser.userMajor">
+              <option value="admin">管理员</option>
+              <option value="repair">普通用户</option>
+              <option value="worker">维修工</option>
+              </select>
+            </div>
+          <div>用户密码 <input type="text" ng-model="currUser.userPassword" value="{{currUser.userPassword}}"></div>
+       
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-success" ng-if="modal.type != 'scanUser'" ng-click="method()">{{modal.result}}</button>
+      </div>
+    </div>
+  </div>
+</div>

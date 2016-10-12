@@ -1,0 +1,22 @@
+<h2>信息反馈中心</h2>
+<table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>维修人员</th>
+          <th>报修人员</th>
+          <th>评价</th>
+          <th>备注</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="(id, f) in feedback">
+          <td>{{id+1}}</td>
+          <td>{{f.work}}</td>
+          <td>{{f.user}}</td>
+          <td>{{f.feed}}</td>
+          <td>{{f.mark}}</td>
+        </tr>
+
+      </tbody>
+    </table>

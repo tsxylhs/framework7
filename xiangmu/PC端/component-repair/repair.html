@@ -1,0 +1,55 @@
+<div class="container-fluid bg-repair" style="height:100vh">
+  <div class="row-fluid">
+    <div class="col-lg-12">
+      <h3>
+       <a href="#/return to home"> SRH智慧校园</a>/<small>SRH保修系统</small>
+       <hr>
+      </h3>
+    </div>
+  </div> 
+  <div class="row-fluid">
+    <div class="col-lg-3">
+      <ul class="nav nav-list" ng-repeat="(title, item) in powerList">
+        <li class="nav-header">
+          {{title}}
+        </li>
+
+        <li ng-repeat="i in item">
+          <a href="{{i.url}}">{{i.name}}</a>
+        </li>
+
+
+      </ul>
+
+
+
+      <ul class="nav nav-list" ng-repeat="(title, item) in managerList">
+        <li class="nav-header">
+          {{title}}
+        </li>
+        <li ng-repeat="i in item">
+          <a href="{{i.url}}">{{i.name}}</a>
+        </li>
+        <li>
+      
+
+      </ul>
+    </div>
+
+
+
+    <div class="col-lg-9" style="height:60vh;">
+      <div ui-view>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              
+              <p>这里添加保修流程</p>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
