@@ -1,9 +1,0 @@
-#!/usr/bin/nodejs
-var debug = require('debug')('redHatServer');
-var app = require('../app');
-
-app.set('port', process.env.PORT || 3000);//如果在命令行输入端口号则使用该端口开启服务器，否则使用默认端口号3000
-
-var server = app.listen(app.get('port'), function() {//开启服务器
-  debug('Express server listening on port ' + server.address().port);
-});
