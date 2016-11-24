@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <!-- Path to your custom app styles-->
+     <link href="img/i-f7.png" rel="shortcut icon">
+    <link rel="stylesheet" href="css/my-app.css">
+       
+      <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
+
+    <script type="application/javascript" src="lib/json2.js"></script>
+    <script type="application/javascript" src="lib/jstorage.js"></script>
+     <script type="text/javascript" src="lib/framework7.js"></script>
+
+     <script type="text/javascript" src="js/init.js"></script>
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+     <div class="panel panel-left panel-cover">
+      <div class="content-block-title">我的帐号</div>
+      <div class="list-block">
+        <ul>
+          <li>
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner">
+                  <div class="item-title"><span id="user-email-span"></span></div>
+                </div>
+              </div></li>
+          <li><a href="#" class="close-panel item-link" id="logoutBtn">
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-f7"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">退出</div>
+                </div>
+              </div></a></li>
+        </ul>
+      </div>
+      <div class="content-block">
+
+               <div class="content-block-title">设置</div>
+                <div class="list-block">
+                  <ul>
+                   <li><a href="html/Pdf.html" data-view=".view-main" id="pdf" data-context-name="pdf" class="item-link close-panel">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">pdf书籍管理</div>
+                          </div>
+                          </div>
+                        </a>
+                      </li>
+                       <li><a href="html/Pdf.html" data-view=".view-main" id="pdf" data-context-name="pdf" class="item-link close-panel">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">背景颜色设置</div>
+                          </div>
+                          </div>
+                        </a>
+                      </li>
+                    
+                    <li><a href="html/about.html" data-view=".view-main" id="about" data-context-name="dalidy" class="item-link close-panel">
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title">关于我们</div>
+                          </div>
+                          </div>
+                        </a>
+                      </li>
+                      
+                  </ul>
+                </div>
+      </div>
+    </div> 
+    <!-- Right panel with cover effect-->
+  <!--   <div class="panel panel-right panel-cover">
+    <div class="content-block">
+      <p>I am Crazy Egg! Haha~</p>
+    </div>
+  </div> -->
+    <!-- Views, and they are tabs-->
+   <!--We need to set "toolbar-through" class on it to keep space for our tab bar-->
+   <div class="views">
+    <div class="views tabs toolbar-through">
+      <!-- Your first view, it is also a .tab and should have "active" class to make it visible by default-->
+      <div id="view-1" class="view view-main tab active">
+                <!-- We can make with view with navigation, let's add Top Navbar-->
+      <div class="navbar">
+        <div class="navbar-inner">
+       
+          <div class="center sliding"> 主页</div>
+          <div class="right"><a href="#" data-panel="right" class="open-panel link icon-only"><i class="icon icon-bars-blue"></i></a></div>
+        </div>
+      </div> 
+        <div class="pages navbar-through">
+
+          <div data-page="todolist" class="page">
+         
+            <div class="page-content pull-to-refresh-content todo-refresh">
+            <div>
+
+             <div align="center" id="clock1">
+                 <canvas id="clock" height="200px" width="200px"></canvas>
+           </div>
+           </div>
+         <script type="text/javascript" src="js/pages/clock.js"></script>
+              <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+              <!--   <div class="pull-to-refresh-arrow"></div> -->
+              </div>  
+              <div class="list-block">
+              <ul class="todo-refresh-ul">
+               
+
+              </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Second view (for second wrap)-->
+      <div id="view-2" class="view tab">
+     <!--    We can make with view with navigation, let's add Top Navbar -->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">我的回忆</div>
+            <div class="right"><a href="#" data-panel="right" class="open-panel link icon-only"><i class="icon icon-bars-blue"></i></a></div>
+          </div>
+        </div>
+        <div class="pages navbar-through">
+         <div data-page="dalidy" class="page">
+         <div class="page-content pull-to-refresh-content dalidy-refresh">
+
+
+                  <div class="pull-to-refresh-layer">
+                <div class="preloader"></div>
+            
+              </div>
+              <div class="list-block media-list">
+                <ul class="dalidy-refresh-ul">
+           
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+     <div id="view-3" class="view tab">
+     <!--   We can make with view with navigation, let's add Top Navbar -->
+       <div class="navbar">
+         <div class="navbar-inner">
+           <div class="left"><a href="#" data-panel="left" class="open-panel link icon-only"><i class="icon icon-bars-blue"></i></a></div>
+           <div class="center sliding">我的日程</div>
+           <div class="right"><a href="#" data-panel="right" class="open-panel link icon-only"><i class="icon icon-bars-blue"></i></a></div>
+         </div>
+       </div>
+       <div class="pages navbar-through">
+         <div data-page="history" class="page">
+           <div class="page-content pull-to-refresh-content history-refresh">
+             <div class="pull-to-refresh-layer">
+               <div class="preloader"></div>
+               <div class="pull-to-refresh-arrow"></div>
+             </div>
+             <div class="list-block media-list">
+               <ul class="history-refresh-ul">
+     
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div> 
+     <div id="view-4" class="view tab">
+       <div class="pages navbar-fixed">
+         <div data-page="addNewTask" class="page">
+           <div class="navbar">
+             <div class="navbar-inner">
+               
+               <div class="center">新建计划/日程</div>
+             </div>
+           </div>
+           <div class="page-content">
+             <div class="buttons-row">
+            <!-- Link to 1st tab, active -->
+            <a href="#tab1" class="button active tab-link">新建计划</a>
+            <!-- Link to 2nd tab -->
+            <a href="#tab2" class="button tab-link">新建日程</a>
+         
+          </div>
+              <div class="tabs-swipeable-wrap">
+      <!-- Tabs, tabs wrapper -->
+      <div class="tabs">
+        <!-- Tab 1, active by default -->
+        <div id="tab1" class="page-content tab active">
+          <div class="content-block">
+                      <div class="list-block">
+               <ul>
+                 <li>
+                   <div class="item-content">
+                     <div class="item-inner">
+                       <div class="item-title label">计划标题:</div>
+                       <div class="item-input">
+                         <input type="text" id="task-name" placeholder="计划标题">
+                       </div>
+                     </div>
+                   </div>
+                 </li>
+                 <li>
+                   <div class="item-content">
+                     <div class="item-inner">
+                       <div class="item-title label">完成时间:</div>
+                       <div class="item-input">
+                         <input type="date" id="date-picker" placeholder="计划完成时间 ">
+                       </div>
+                     </div>
+                   </div>
+                 </li>
+                
+                 <li class="align-top">
+                      <div class="item-content">
+                        <div class="item-media"><i class=""></i></div>
+                        <div class="item-inner">
+                          <div class="item-title label">计划内容:</div>
+                          <div class="item-input">
+                            <textarea id="text-picker"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                 <li>
+                   <div class="item-content">
+                     <div class="item-media"></div>
+                     <div class="item-inner">
+                       <div class="item-input">
+                         <a href="#" class="button submitBtn">创建计划</a>
+                       </div>
+                     </div>
+                   </div>
+                 </li>
+               </ul>
+             </div>
+          </div>
+        </div>
+        <!-- Tab 2 -->
+        <div id="tab2" class="page-content tab">
+          <div class="content-block">
+           <div class="list-block">
+             <ul>
+    <!-- Text inputs -->
+    <li>
+      <div class="item-content">
+        <div class="item-media"><i class=""></i></div>
+        <div class="item-inner">
+          <div class="item-title label">行程标题</div>
+          <div class="item-input">
+            <input type="text" placeholder="行程" id="title-picker">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-media"><i class=""></i></div>
+        <div class="item-inner">
+          <div class="item-title label">目标地点</div>
+          <div class="item-input">
+            <input type="text" placeholder="行程地点" id="address-picker">
+          </div>
+        </div>
+      </div>
+    </li>
+  <li>
+      <div class="item-content">
+        <div class="item-media"><i class=""></i></div>
+        <div class="item-inner">
+          <div class="item-title label">执行日期</div>
+          <div class="item-input">
+            <input type="date" placeholder="执行日期"  id="date-picker">
+          </div>
+        </div>
+      </div>
+    </li>
+  
+           <li>
+                   <div class="item-content">
+                     <div class="item-inner">
+                       <div class="item-title label">所需时间</div>
+                       <div class="item-input">
+                         <input type="text" id="time-picker" value="10:00" placeholder="pick a time" data-time-format="H:i:s">
+                       </div>
+                     </div>
+                   </div>
+                 </li>
+  
+   
+    
+   
+   
+    <!-- Textarea -->
+    <li class="align-top">
+      <div class="item-content">
+        <div class="item-media"><i class=""></i></div>
+        <div class="item-inner">
+          <div class="item-title label">行程内容</div>
+          <div class="item-input">
+            <textarea id='text1-picker'></textarea>
+          </div>
+        </div>
+      </div>
+    </li>
+               <li>
+                   <div class="item-content">
+                     <div class="item-media"></div>
+                     <div class="item-inner">
+                       <div class="item-input">
+                         <a href="#" class="button submitBtn2">提交行程</a>
+                       </div>
+                     </div>
+                   </div>
+                 </li>
+       </ul>
+
+
+           </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+             <div class="content-block">
+            <p>我的日程,我来管理</p>
+          </div> 
+           </div>
+         </div>
+       </div>
+     </div> 
+     <div id="view-5" class="view tab">
+      <div class="pages navbar-fixed">
+         <div data-page="addNewdalidy" class="page">
+           <div class="navbar">
+             <div class="navbar-inner">
+               
+               <div class="center">新建日记</div>
+             </div>
+           </div>
+           <div class="page-content">
+             <div class="list-block">
+               <ul>
+                 <li>
+                   <div class="item-content">
+                     <div class="item-inner">
+                       <div class="item-title label">日记主题:</div>
+                       <div class="item-input">
+                         <input type="text" id="dalidy-name" placeholder="点击输入">
+                       </div>
+                     </div>
+                   </div>
+                 </li>
+                 <li>
+                   <div class="item-content">
+                     <div class="item-inner">
+                       <div class="item-title label">创建日期:</div>
+                       <div class="item-input">
+                         <input type="date" id="date-picker" placeholder=new data()>
+                       </div>
+                     </div>
+                   </div>
+                 </li>
+                 <li class="align-top">
+                  <div class="item-content">
+                    <div class="item-media"><i class=""></i></div>
+                    <div class="item-inner">
+                      <div class="item-title label">日记内容:</div>
+                      <div class="item-input">
+                        <textarea id='text-dalidy'></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                 <li>
+                   <div class="item-content">
+                     <div class="item-media"></div>
+                     <div class="item-inner">
+                       <div class="item-input">
+                         <a href="#" class="button submitBtn1">提交日记</a>
+                       </div>
+                     </div>
+                   </div>
+                 </li>
+               </ul>
+             </div>
+             <div class="content-block">
+            <p>我的日记,记录精彩!</p>
+          </div> 
+           </div>
+         </div>
+       </div>
+        </div>
+      <!-- Bottom Tabbar-->
+      <div class="toolbar tabbar">
+        <div class="toolbar-inner">
+        <a href="#view-5" class="tab-link"><i class="icon  icon-form-calendar"></i>
+               
+        </a>
+            <a href="#view-2" class="tab-link"><i class="icon fa fa-comment-o fa-2x"></i></a>
+            <a href="#view-1" class="tab-link active"><i class="icon fa fa-inbox fa-2x"></i></a>
+            <a href="#view-3" class="tab-link"><i class="icon fa fa-check-square-o fa-2x"><span class="badge badge-red">4</span></i></a>
+            <a href="#view-4" class="tab-link"><i class="icon fa fa-edit fa-2x"></i></a></div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Path to Framework7 Library JS-->
+   
+    <script type="application/javascript" src="lib/jquery-2.1.1.min.js"></script>
+    <script type="application/javascript" src="lib/jquery.timepicker.min.js"></script>
+    <script type="application/javascript" src="lib/json2.js"></script>
+    <script type="application/javascript" src="lib/jstorage.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript">
+      $('#time-picker').timepicker({ 'timeFormat': 'H:i:s' });
+    </script>
+    <script type="application/javascript" src="lib/jquery.timepicker.js"></script>
+
+       <script type="text/javascript" src="js/pages/dalidy.js"></script>
+     <script type="text/javascript" src="js/init.js"></script>
+ <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+
+ <script type="text/javascript" src="lib/easySlider.min.js"></script>
+  </body>
+        <script type="text/javascript">
+        $(function() {
+          
+    $("#slider").easySlider( {
+      slideSpeed: 500,
+      paginationSpacing: "15px",
+      paginationDiameter: "12px",
+      paginationPositionFromBottom: "20px",
+      slidesClass: ".slides",
+      controlsClass: ".controls",
+      paginationClass: ".pagination"          
+    });
+  });
+      </script>
+</html>
