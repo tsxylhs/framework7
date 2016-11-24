@@ -1,0 +1,42 @@
+<heading></heading>
+<div class="login container-fluid"  style="text-align:center;">
+	<div class="row" >
+		<div class="col-md-6">
+			<div class="login-showbox phone">
+				<p align="center">欢迎使用SRH智慧校园</p>
+				<hr>
+				<img src="img/srh_logo.ico" alt="logo">
+				<p>泰山学院小红帽团队</p>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="login-box">
+				<p class="sys-p">用户注册</p>
+				<hr>
+				
+					<div class="form-group" style="text-align:left;">
+						<label for="">手机号/工号：</label>
+						<input type="text" class="form-control" placeholder="请输入您的手机号 or 工号" ng-model="account" required ng-minlength="4" ng-maxlength="16">
+
+					
+					</div>
+					<div class="form-group"  style="text-align:left;">
+						<label for="">密码：</label>
+						<input type="password" class="form-control" placeholder="输入您的密码" ng-model="password">
+						
+					</div>
+					<div class="form-group"  style="text-align:left;">
+						<label for="">确认密码：</label>
+						<input type="password" class="form-control" placeholder="输入您的密码" ng-model="user.password2">
+						
+					</div>
+					<div class="form-group">
+					<label for=""></label>
+						<button class="btn btn-success form-control" ng-click="register(account,password)"><i class="glyphicon glyphicon-plus"></i>注册</button>
+					</div>
+				
+
+			</div>
+		</div>
+	</div>
+</div>
