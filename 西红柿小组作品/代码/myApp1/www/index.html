@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	
+		<title>个人信息管理</title>
+			<link rel="stylesheet" type="text/css" href="css/jquery.timepicker.css">
+		<link rel="stylesheet" type="text/css" href="css/datedropper.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/timedropper.min.css">
+		<link rel="stylesheet" href="css/framework7.themes.css">
+		<link rel="stylesheet" href="css/init.less.css">
+		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+		<link rel="stylesheet" type="text/css" href="css/framework7.material.colors.min.css">
+	
+		<link rel="stylesheet" type="text/css" href="css/framework7.material.css">
+		
+				<link rel="stylesheet" href="css/framework7.css">
+		<script type="text/javascript" src="js/framework7.js"></script>
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/cookies.js"></script>
+	</head>
+	<body>
+		<div class="statusbar-overlay"></div>
+		<div class="views">
+			<div class="view view-main hidden-toolbar">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="center sliding">个人信息管理</div>
+					</div>
+				</div>
+				<div class="toolbar" id="developer-toolbar">
+				    <div class="toolbar-inner">
+				        <a></a>
+						<a></a>
+				        <a href="#" class="link open-popup" data-popup=".popup-dev"><span style="width: 44px; text-align: center; font-size: 32px" class="ion-ios7-gear-outline"></span></a>
+				    </div>
+				</div>
+
+<div class="toolbar" id="developer-toolbar">
+				    <div class="toolbar-inner">
+				        <a></a>
+						<a></a>
+				        <a href="#" class="link open-popup" data-popup=".popup-dev"><span style="width: 44px; text-align: center; font-size: 32px" class="ion-ios7-gear-outline"></span></a>
+				    </div>
+				</div>
+
+				
+				<div class="pages navbar-through">
+					<div data-page="index" class="page page-on-center">
+						<div class="page-content">
+							<div class="content-block-title" data-i18n="USER_CONTROL_CENTER">个人账户</div>
+							<div class="list-block tablet-inset">
+								<ul>
+									<li>
+										<a href="#" class="center" data-popup=".popup-login">
+											<div class="item-content">
+												<div class="item-inner">
+													<div class="item-title" id="user-label" style="width: 100%" data-i18n="NOT_SIGNED_IN">登录</div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="content-block-title">管理</div>
+							<div class="list-block tablet-inset">
+								<ul>
+									<li>
+										<a href="frames/bugs/free.html" class="item-link">
+											<div class="item-content">
+												<div class="item-inner">
+													<div class="item-title" data-i18n="OPEN_BUGS">个人日程</div>
+													<div class="item-after"></div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="frames/bugs/dalidy.html" class="item-link">
+											<div class="item-content">
+												<div class="item-inner">
+													<div class="item-title" data-i18n="CLOSED_BUGS">日记管理</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="frames/bugs/plan.html" class="item-link">
+											<div class="item-content">
+												<div class="item-inner">
+													<div class="item-title" data-i18n="ARCHIVED_BUGS">我的计划</div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						
+							<div class="list-block tablet-inset">
+								<ul>
+									<li>
+										<a href="frames/settings/index.html" class="item-link">
+											<div class="item-content">
+												<div class="item-inner">
+														<div class="item-title" data-i18n="SETTINGS">设置</div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="list-block tablet-inset">
+								<ul>
+								<li>
+										<a href="#" class="open-popup" data-popup=".popup-getting-started">
+											<div class="item-content">
+												<div class="item-inner">
+														<div class="item-title" data-i18n="SHOW_TIPS">Show Tips</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+									<li>
+										<a href="#" class="open-popup" data-popup=".popup-getting-started">
+											<div class="item-content">
+												<div class="item-inner">
+														<div class="item-title" data-i18n="SHOW_TIPS">关于我们</div>
+												</div>
+											</div>
+										</a>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					
+<div>
+<a href="#" class="floating-button floating-button-to-popover open-popover color-purple">
+    <i class="icon icon-plus"></i>
+  </a>
+</div>
+
+</div>
+
+		</div>
+	</div>
+			
+
+		</div>
+		<div class="popup popup-login">
+			<div class="view view-login">
+				<div class="pages navbar-through">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="center sliding"></div>
+							<div class="right sliding"><a href="#" class="link close-popup"><span>返回</span></a></div>
+						</div>
+					</div>
+					<div data-page="login-screen-embedded" class="page">
+						<div class="page-content login-screen-content">
+							<img style="position: relative; left: 50%; margin-left: -60px; margin-top: 25px; width: 120px; height: 120px;" src="img/th.jpeg" />
+							<div class="login-screen-title">登录</div>
+							<form>
+
+								<div class="list-block">
+									<ul>
+										<li class="item-content">
+											<div class="item-inner">
+												<div class="item-title label">邮箱</div>
+												<div class="item-input">
+													<input id="username" type="text" name="username" placeholder="mail@example.com" autocapitalize="off" autocorrect="off" />
+												</div>
+											</div>
+										</li>
+										<li class="item-content">
+											<div class="item-inner">
+												<div class="item-title label">密码</div>
+												<div class="item-input">
+													<input id="password" type="password" name="password" placeholder="Required"/>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="list-block">
+									<ul>
+										<li><a href="#" class="item-link list-button signin-button">登录</a></li>
+ 										<li><a href="#" class="item-link list-button signup-button" >注册</a></li>
+									</ul>
+									
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="popup popup-getting-started tablet-fullscreen">
+			<div class="view view-getting-started">
+				<div class="pages">
+					<div class="page no-swipeback no-toolbar" data-page="getting-started">
+						<div class="page-content login-screen-content">
+							<img class="getting-started-icon" src="img/th1.jpeg" />
+							<div class="getting-started-title">关于我们</div>	
+							
+								
+								<div align="center">
+                                      一旦那个令你快乐的事情不复存在，你的快乐也随之消失。而喜悦不同，它是由内向外的绽放，从内心深处油然而生。
+                                     ——张德芬 《遇见未知的自己》
+							</div>
+				<a href="#" class="link not-now close-popup">返回</a>
+						</div>
+
+						haaha
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="popover popover-usercp">
+			<div class="popover-angle"></div>
+			<div class="popover-inner">
+				<div class="list-block">
+					<ul>
+						<li><a href="#" class="list-button item-link close-popover button-red logout-button" data-i18n="SIGN_OFF">退出</a></li>
+						<!-- <li><a href="#" class="list-button item-link close-popover">User Control Panel</a></li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+<div class="popover demo-popover">
+  <div class="popover-inner">
+    <div class="list-block">
+      <ul>
+        <li>
+          <a href="frames/bulid/buliderD.html" class="item-content item-link">
+            <div class="item-inner">
+              <div class="item-title">新建日记</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="frames/bulid/buliderF.html" class="item-content item-link">
+            <div class="item-inner">
+              <div class="item-title">新建日程</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="frames/bulid/buliderP.html" class="item-content item-link">
+            <div class="item-inner">
+              <div class="item-title">新建计划</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="js/jstorage.js"></script>
+	
+		<script type="text/javascript" src="js/init.js"></script>
+		<script type="text/javascript" src="js/jquery.timepicker.min.js"></script>
+		<script type="text/javascript" src="js/datedropper.min.js"></script>
+		<script type="text/javascript" src="js/timedropper.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript">
+      $('#time-picker').timepicker({ 'timeFormat': 'H:i:s' });
+      $("#pickdate").dateDropper({
+        animate: false,
+        format: 'Y-m-d',
+        maxYear: '2020'
+      });
+      $("#pickdate1").dateDropper({
+        animate: false,
+        format: 'Y-m-d',
+        maxYear: '2020'
+      });
+$("#picktime").timeDropper({
+  meridians: false,
+  format: 'HH:mm',
+});
+	</script>
+	</body>
+</html>
